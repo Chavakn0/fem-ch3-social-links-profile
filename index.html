@@ -42,6 +42,7 @@
       padding: 40px;
       display: flex;
       flex-direction: column;
+      justify-content: center;
       gap: 24px;
       border-radius: 12px;
       line-height: 150%;
@@ -81,11 +82,12 @@
       font-size: 14px;
       font-weight: bold;
       color: #fff;
+      outline: none;
       cursor: pointer;
     }
 
     button:is( :hover, :focus) {
-      animation: button-animation 1s ease-in-out 0s 1 normal forwards;
+      animation: button-animation 1s ease-in 0s 1 normal forwards;
     }
 
     @keyframes button-animation {
@@ -97,6 +99,10 @@
         background-color: #C4F82A;
         color: hsl(0, 0%, 20%);
       }
+    }
+
+    button:not( :hover, :focus) {
+      animation: button-animation 1s ease-out 0s 1 backwards none;
     }
 
     .attribution { font-size: 11px; text-align: center; }
