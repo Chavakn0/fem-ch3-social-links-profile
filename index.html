@@ -40,6 +40,8 @@
       width: 384px;
       height: 611px;
       padding: 40px;
+      display: flex;
+      flex-direction: column;
       gap: 24px;
       border-radius: 12px;
       line-height: 150%;
@@ -49,11 +51,12 @@
     .container img {
       width: 88px;
       height: 88px;
+      border-radius: 999px;
     }
 
     article h1 {
       font-size: 24px;
-      font-weight: bold;
+      font-weight: 550;
       color: #fff;
     }
 
@@ -70,17 +73,19 @@
     }
 
     button {
-      width: auto;
+      width: max-content;
       height: 45px;
       margin: 16px 0px;
       background-color: hsl(0, 0%, 20%);
+      border-radius: 8px;
       font-size: 14px;
       font-weight: bold;
       color: #fff;
+      cursor: pointer;
     }
 
     button:is( :hover, :focus) {
-      animation: button-animation 1s ease-in-out 0s 1 normal none;
+      animation: button-animation 1s ease-in-out 0s 1 normal forwards;
     }
 
     @keyframes button-animation {
